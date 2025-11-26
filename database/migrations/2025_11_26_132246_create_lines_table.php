@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('lines', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained('product')->onDelete('cascade');
-            $table->foreignId('order_id')->constrained('order')->onDelete('cascade');
+            $table->foreignId('products_id')->constrained('products')->onDelete('cascade');
+            $table->foreignId('orders_id')->constrained('orders')->onDelete('cascade');
             $table->integer('quantite');
             $table->float('montant',8,2);
             $table->timestamps();
