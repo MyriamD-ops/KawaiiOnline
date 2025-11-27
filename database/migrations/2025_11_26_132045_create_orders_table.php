@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('users_id')->constrained('users')->onDelete('cascade');
-            $table->float('prix',8,2);
+            $table->float('montant',8,2);
             $table->string('state');
             $table->timestamps();
         });
